@@ -203,3 +203,13 @@ LOGGING = {
         },
     }
 }
+
+# 在全局中设置使用 异常处理函数
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'peach_mall.utils.exceptions.exception_handler'
+}
+
+
+# 告知Django的认证系统使用哪个自定义User模型类，格式是：AUTH_USER_MODEL = "子应用.模型类"
+AUTH_USER_MODEL = "users.User"
+
